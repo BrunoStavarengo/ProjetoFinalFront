@@ -10,5 +10,5 @@ Instrutor Rafael Ferreira.
 
 ## Pré-requisitos
 
-Node.js
+Node.js,
 Angular CLI
