@@ -1,0 +1,53 @@
+<h1 class="display-6">{{clienteCpf ? 'Editar' : 'Cadastrar'}}</h1>
+<hr>
+
+<div class="container-fluid">
+  <form [formGroup]="clienteForm" (ngSubmit)="cadastrar()">
+    <div class="row">
+      <div class="col-3">
+        <div class="mb-3">
+          <label for="cpf" class="form-label">CPF</label>
+          <input id="cpf" type="text" class="form-control" formControlName="cpf"/>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome</label>
+          <input id="nome" type="text" class="form-control" formControlName="nome" />
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="mb-3">
+          <label for="telefone" class="form-label">Telefone</label>
+          <input id="telefone" type="text" class="form-control" formControlName="telefone" min="0"/>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="mb-3">
+          <label for="cep" class="form-label">CEP</label>
+          <input id="cep" type="text" class="form-control" formControlName="cep"/>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="mb-3">
+          <label for="endereco" class="form-label">Endereço</label>
+          <input id="endereco" type="text" class="form-control" formControlName="endereco"/>
+        </div>
+      </div>
+      <div class="col-1">
+        <div class="mb-3">
+          <label for="numero" class="form-label">Número</label>
+          <input id="numero" type="text" class="form-control" formControlName="numero"/>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="mb-3">
+          <label for="rendimentoMensal" class="form-label">Rendimento Mensal</label>
+          <input id="rendimentoMensal" type="number" class="form-control" formControlName="rendimentoMensal"/>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="!clienteForm.valid" class="btn btn-primary">{{clienteCpf ? 'Salvar' : 'Cadastrar'}}</button>
+  </form>
+</div>
